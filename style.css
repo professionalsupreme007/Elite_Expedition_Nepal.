@@ -1,64 +1,102 @@
 * {
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
   margin: 0;
-  background: #f4f7fb;
+  background: #f5f7fb;
+  color: #222;
 }
 
 /* HERO */
 .hero {
-  background: url("images/banner1.jpg") center/cover no-repeat;
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470") center/cover;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.55);
+  height: 100%;
   color: white;
-  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+}
+
+.cta {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #ffb703;
+  color: black;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
 }
 
 /* DESTINATIONS */
 .destinations {
+  padding: 40px 20px;
+}
+
+.destinations h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  padding: 20px;
 }
 
 .card {
   background: white;
-  border-radius: 8px;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform .3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
 }
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
 }
 
-.card div {
-  padding: 12px;
+.card-content {
+  padding: 15px;
 }
 
-.card button {
-  margin-right: 5px;
-  padding: 6px 10px;
+.card-content button {
+  margin-top: 10px;
+  padding: 8px 12px;
   border: none;
-  cursor: pointer;
   background: #0b5ed7;
   color: white;
-  border-radius: 4px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 /* BOOKING */
 .booking {
-  padding: 20px;
   background: white;
+  padding: 40px 20px;
 }
 
 .booking form {
-  max-width: 400px;
+  max-width: 420px;
   margin: auto;
 }
 
@@ -66,8 +104,8 @@ body {
 .booking select,
 .booking button {
   width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-bottom: 12px;
+  padding: 12px;
 }
 
 /* VR */
@@ -76,7 +114,7 @@ body {
   position: fixed;
   inset: 0;
   background: black;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .vr-modal span {
@@ -84,7 +122,7 @@ body {
   top: 15px;
   right: 20px;
   color: white;
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
 }
 
@@ -101,18 +139,21 @@ body {
 
 .chat a {
   display: block;
-  margin-top: 5px;
-  padding: 10px;
+  margin-top: 6px;
+  padding: 10px 14px;
+  border-radius: 30px;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  font-size: 14px;
 }
 
-.chat a:nth-child(1) { background: #25d366; }
-.chat a:nth-child(2) { background: #1877f2; }
-.chat a:nth-child(3) { background: #e1306c; }
+.chat a:nth-child(1){ background:#25d366; }
+.chat a:nth-child(2){ background:#e1306c; }
+.chat a:nth-child(3){ background:#1877f2; }
 
 footer {
   text-align: center;
-  padding: 10px;
+  padding: 15px;
+  background: #111;
+  color: #ccc;
 }
