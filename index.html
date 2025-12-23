@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Global Travel & Tours</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>WanderLux – Travel & Tours</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 <body>
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Explore The World </h1>
-  <p>International & National Travel Packages</p>
+  <div class="overlay">
+    <h1>Discover The World In Style</h1>
+    <p>International & National Travel Experiences</p>
+    <a href="#destinations" class="cta">Explore Destinations</a>
+  </div>
 </section>
 
 <!-- DESTINATIONS -->
-<section class="destinations" id="destinations"></section>
+<section id="destinations" class="destinations">
+  <h2>Popular Destinations</h2>
+  <div class="grid" id="destGrid"></div>
+</section>
 
-<!-- BOOKING FORM -->
+<!-- BOOKING -->
 <section class="booking">
-  <h2>Book Your Trip</h2>
+  <h2>Book Your Journey</h2>
 
   <form id="bookingForm">
-    <input type="text" placeholder="Full Name" required />
-    <input type="email" placeholder="Email" required />
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
 
     <select id="destinationSelect" required>
-      <option value="">Select Destination</option>
+      <option value="">Choose Destination</option>
     </select>
 
-    <input type="number" id="people" min="1" placeholder="No. of People" required />
+    <input type="number" min="1" placeholder="No. of Travelers" required>
 
     <select>
-      <option>National Client</option>
       <option>International Client</option>
+      <option>National Client</option>
     </select>
 
     <button type="submit">Proceed to Payment</button>
@@ -44,21 +50,21 @@
 
 <!-- VR MODAL -->
 <div class="vr-modal" id="vrModal">
-  <span onclick="closeVR()">✖</span>
+  <span onclick="closeVR()">✕</span>
   <a-scene embedded>
     <a-sky id="vrSky"></a-sky>
   </a-scene>
 </div>
 
-<!-- CHAT BUTTONS -->
+<!-- CHAT -->
 <div class="chat">
-  <a href="https://wa.me/9779800000000" target="_blank"> WhatsApp</a>
-  <a href="https://m.me/yourpage" target="_blank"> Messenger</a>
-  <a href="https://instagram.com/yourpage" target="_blank"> Instagram</a>
+  <a href="https://wa.me/9779800000000" target="_blank">💬 WhatsApp</a>
+  <a href="https://instagram.com" target="_blank">📸 Instagram</a>
+  <a href="https://m.me" target="_blank">📘 Messenger</a>
 </div>
 
 <footer>
-  <p>© 2025 Global Travel & Tours</p>
+  <p>© 2025 WanderLux Travel</p>
 </footer>
 
 <script src="script.js"></script>
