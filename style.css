@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f7fb;
+}
+
+/* HERO */
+.hero {
+  background: url("images/banner1.jpg") center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* DESTINATIONS */
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card div {
+  padding: 12px;
+}
+
+.card button {
+  margin-right: 5px;
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+  background: #0b5ed7;
+  color: white;
+  border-radius: 4px;
+}
+
+/* BOOKING */
+.booking {
+  padding: 20px;
+  background: white;
+}
+
+.booking form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.booking input,
+.booking select,
+.booking button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+/* VR */
+.vr-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 100;
+}
+
+.vr-modal span {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.vr-modal a-scene {
+  height: 100vh;
+}
+
+/* CHAT */
+.chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.chat a {
+  display: block;
+  margin-top: 5px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.chat a:nth-child(1) { background: #25d366; }
+.chat a:nth-child(2) { background: #1877f2; }
+.chat a:nth-child(3) { background: #e1306c; }
+
+footer {
+  text-align: center;
+  padding: 10px;
+}
